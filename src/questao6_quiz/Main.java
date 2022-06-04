@@ -1,6 +1,6 @@
 package questao6_quiz;
 
-import java.util.ArrayList;
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class Main {
@@ -11,44 +11,35 @@ public class Main {
         System.out.println("Informe seu nome de usuário: ");
         String usuario = leia.nextLine();
 
+        int qtdPerguntas = Pergunta.getQtdPerguntas();
+
         String palpite;
         int erros = 0;
         int acertos = 0;
 
-        ArrayList<String> conteudo = new ArrayList<String>();
-        ArrayList<String> resposta = new ArrayList<String>();
-        conteudo.add("Qual o maior animal do mundo? ");
-        resposta.add("Baleia");
-        conteudo.add("Qual o menor país do mundo? ");
-        resposta.add("Vaticano");
-        conteudo.add("Qual a raiz quadrada de 121? ");
-        resposta.add("11");
-        conteudo.add("Onde fica o maior rio do mundo? ");
-        resposta.add("Brasil");
-        conteudo.add("Em que cidade fica o Museo do Louvre? ");
-        resposta.add("Paris");
-        conteudo.add("Qual o animal que mata mais humanos por ano? ");
-        resposta.add("Mosquito");
-        conteudo.add("Quantas fases a lua têm? ");
-        resposta.add("4");
-        conteudo.add("Quantas camadas a atmosféra possui? ");
-        resposta.add("5");
-        conteudo.add("Quem falou a frase 'Penso, logo existo'? ");
-        resposta.add("Descartes");
-        conteudo.add("Quantas casas decimais tem o número pi? ");
-        resposta.add("Infinitas");
-
         System.out.println("Vamos começar!!!");
 
-        for (int i = 0; i<10; i++){
-            System.out.println(conteudo.get(i));
+        Pergunta[] arr = new Pergunta[qtdPerguntas];
+        arr[0] = new Pergunta("Quantas casas decimais tem o número pi? ", "Infinitas");
+        arr[1] = new Pergunta("Qual o maior animal do mundo? ", "Baleia");
+        arr[2] = new Pergunta("Qual o menor país do mundo? ", "Vaticano");
+        arr[3] = new Pergunta("Qual a raiz quadrada de 121? ", "11");
+        arr[4] = new Pergunta("Onde fica o maior rio do mundo? ", "Brasil");
+        arr[5] = new Pergunta("Em que cidade fica o Museo do Louvre? ", "Paris");
+        arr[6] = new Pergunta("Qual o animal que mata mais humanos por ano? ", "Mosquito");
+        arr[7] = new Pergunta("Quantas fases a lua têm?" , "4");
+        arr[8] = new Pergunta("Quantas camadas a atmosféra possui? ", "5");
+        arr[9] = new Pergunta("Quem falou a frase 'Penso, logo existo'? ", "Descartes");
+
+        for (int i = 0; i<qtdPerguntas; i++){
+            System.out.println(arr[i].getComanda());
             palpite = leia.nextLine();
-            if (palpite.equalsIgnoreCase(resposta.get(i))){
+            if (palpite.equalsIgnoreCase(arr[i].getResposta())){
                 System.out.println("Parabéns, você acertou!");
                 System.out.println("");
                 acertos++;
             } else {
-                System.out.println("Sinto muito mas a resposta certa era " + resposta.get(i));
+                System.out.println("Sinto muito mas a resposta certa era " + arr[i].getResposta());
                 System.out.println("");
                 erros++;
             }
