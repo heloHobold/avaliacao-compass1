@@ -39,15 +39,15 @@ public class Main {
                 System.out.println("");
                 acertos++;
             } else {
-                System.out.println("Sinto muito mas a resposta certa era " + arr[i].getResposta());
+                System.out.println("Sinto muito mas a resposta certa é " + arr[i].getResposta());
                 System.out.println("");
                 erros++;
             }
         }
         System.out.println("");
         System.out.println("Usuário: " + usuario);
-        System.out.println("Acertos: " + acertos);
-        System.out.println("Erros: " + erros);
+        System.out.println("Número de certos: " + acertos);
+        System.out.println("Número de erros: " + erros);
 
     }
 }

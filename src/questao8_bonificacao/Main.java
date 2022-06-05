@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner leia = new Scanner(System.in);
 
-        System.out.println("Qual será a quantidadae de funcionários que serão cadastros? ");
+        System.out.println("Qual será a quantidade de funcionários que serão cadastros? ");
         int qtd = leia.nextInt();
 
         Funcionario[] arr = new Funcionario[qtd];

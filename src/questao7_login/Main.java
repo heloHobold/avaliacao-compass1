@@ -14,7 +14,7 @@ public class Main {
         arr[1] = new Usuario("user2", "password2");
         arr[2] = new Usuario("user3", "password3");
 
-        System.out.println("Informe o usuário: ");
+        System.out.println("Informe o nome do usuário: ");
         String usuario = leia.nextLine();
         System.out.println("Informe a senha: ");
         String senha = leia.nextLine();
