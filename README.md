@@ -29,7 +29,7 @@ O arquivo em que devemos incluir a lista de extensões que desejamos desconsider
 - A utilização do trabalho em equipe que faz com que a motivação e a interação entre os participantes seja constante;
 - A realização de reuniões que fortalecem o feedback contínuo;
 - A eficiência com o cumprimento de objetivos e prazos; 
-- A forte adaptabilidade, agilidade e transparência;
+- A forte adaptabilidade, agilidade e transparência.
 
 
 ### Questão 5
